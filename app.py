@@ -2,9 +2,15 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/')
+def begin():
+    return 'Hello Kamya'
+
+
 @app.route('/p')
-def home():
+def render():
     message = "Hello, Flask!"
+    # return render_template('./index2.html')
     return render_template('index2.html', message=message)
 
 @app.route('/k')
@@ -24,5 +30,4 @@ def htmltag():
     </html>
     '''
 
-if __name__ == '__main__':
-    app.run(debug=True, port=1024)
+
