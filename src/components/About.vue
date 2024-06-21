@@ -1,5 +1,5 @@
 <script setup>
-
+console.log('about')
 </script>
 
 <template>
